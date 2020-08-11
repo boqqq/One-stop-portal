@@ -1,0 +1,30 @@
+/*每块背景和偏移样式*/
+#app{
+  height: 100%;
+}
+.main {
+  margin-top: 9vh;
+}
+.pop_col_tit {
+  padding-left: 5vh;
+  position: relative;
+  height: 4vh;
+  line-height: 4vh;
+  padding-top: 1vh;
+}
+.pop_col_tit h3 {
+  font-size: 2vh;
+  color: #a9b2d4;
+  font-weight: bold;
+  line-height: 4vh;
+}
+.tit_icon {
+  width: 3.6vh;
+  height: 3.6vh;
+  display: inline-block;
+  position: absolute;
+  top:1vh;
+  left: 1vh;
+  z-index: 1;
+}
+.icon-tit-line { background: url("../../static/img/icon-tit-line.svg") no-repeat 100%;}

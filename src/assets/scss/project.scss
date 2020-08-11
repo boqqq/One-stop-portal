@@ -1,0 +1,19 @@
+/*图面板标题选项卡*/
+.switch1 {
+  height: 4vh;
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  font-size: 1.9vh;
+  span {
+    line-height: 4vh;
+    text-align: center;
+    padding: 0.1vh 1.4vh;
+    margin: 0 1vh;
+    border: 1px #3182b2 solid;
+    border-radius: 0.3vh;
+  }
+}
+.switch1_active {
+  background-color: #208EFE;
+}

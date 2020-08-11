@@ -1,0 +1,3 @@
+.dm-tooltip{
+  position: absolute; display: none; border-style: solid; white-space: nowrap; z-index: 999; transition: left 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s, top 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s; background-color: rgba(50, 50, 50, 0.7); border-width: 0px; border-color: rgb(51, 51, 51); border-radius: 4px; color: rgb(255, 255, 255); font: 14px / 21px; padding: 5px; pointer-events: none;
+}

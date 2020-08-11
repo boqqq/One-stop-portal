@@ -1,0 +1,225 @@
+#itIndex1 {
+  display: flex;
+  height: 6vh;
+  margin-top: 1vh;
+  position: absolute;
+  z-index: 100;
+  .el-collapse {
+    border-top: 0px solid #214291;
+    border-bottom: 0px solid #EBEEF5;
+  }
+  .el-collapse-item__header {
+    background-color: #06093c;
+    border-bottom: 0px solid #103488;
+    color: #fff;
+    padding: 0 2.3vh 0 3vh;
+    height: 4vh;
+    line-height: 4vh;
+    width: 3.5vw;
+    font-size: 2vh;
+    font-weight: 600;
+  }
+  .el-collapse-item__header:hover {
+    background-color: #103488;
+    color: #f7df5a;
+  }
+  .el-collapse-item__arrow {
+    margin: 4% 0 0 1vh;
+  }
+  .el-collapse-item__wrap {
+    background-color: #2D3875;
+    border-bottom: 0px solid #EBEEF5;
+    position: absolute;
+    z-index: 9999999;
+  }
+  .el-collapse-item__content {
+    color: #fff;
+    padding-bottom: 1%;
+    font-size: 1.8vh;
+    line-height: 4vh;
+  }
+  .chart_type {
+    p {
+      min-width: 3.5vw;
+      padding: 0.5vh 3vh 0.5vh 2.3vh;
+    }
+  }
+  .chart_type:hover {
+    background-color: #0089ff;
+  }
+}
+
+#itIndex2 {
+  display: flex;
+  height: 5vh;
+  margin-top: 1vh;
+  position: absolute;
+  z-index: 100;
+  .el-menu {
+    background-color: #020291;
+  }
+  .el-menu-item, .el-submenu__title {
+    font-size: 2vh;
+    font-weight: 700;
+    letter-spacing: 1vh;
+  }
+  .el-menu.el-menu--horizontal {
+    border-bottom: 0;
+  }
+  .el-menu--horizontal > .el-submenu .el-submenu__title, .el-menu--horizontal > .el-menu-item {
+    height: 5vh;
+    line-height: 5vh;
+    width: 15vh;
+    text-align: center;
+  }
+  .el-menu--horizontal > .el-menu-item:hover {
+    background-color: #081b72;
+    color: #fff;
+  }
+  .el-menu--horizontal .el-menu-item:not(.is-disabled):hover {
+    color: #fff;
+  }
+  .el-menu--horizontal > .el-menu-item, .el-menu--horizontal > .el-submenu .el-submenu__title {
+    color: #72f0f7;
+  }
+  .el-menu--horizontal > .el-submenu .el-submenu__title:hover {
+    background-color: #081b72;
+    color: #fff;
+  }
+  .el-menu--horizontal > .is-active, .el-menu--horizontal > .is-active .el-submenu__title {
+    background-color: #081b72;
+    color: #fff;
+  }
+  .el-submenu__title i {
+    color: #40b6fd;
+    margin-top: 0;
+  }
+  .el-submenu__icon-arrow {
+    font-size: 1.5vh;
+  }
+}
+
+.el-scrollbar {
+  .el-scrollbar__wrap {
+    overflow-x: hidden;
+  }
+}
+
+//查询框样式
+.itelect {
+  width: 30%;
+  margin-left: 26.7%;
+  .el-input{
+    .el-input__clear{
+      color: #1010d7;
+    }
+  }
+  .el-input__clear:hover{
+    color: red;
+    font-size: 2vh;
+  }
+  .el-input__inner {
+    background-color: transparent;
+    border: 1px #2f2fac  solid;
+    height: 5vh;
+    line-height: 5vh;
+    font-size: 2vh;
+    color: #68d2fb;
+  }
+  .el-input__inner:focus{
+    border: 1px #1010d7 solid;
+  }
+  .el-input-group__append {
+    background-color: #1010d7;
+    border: 1px #1010d7 solid;
+  }
+
+  .el-input-group__append button.el-button, .el-input-group__append .el-button {
+    font-size: 2vh;
+    color: #68d2fb;
+  }
+}
+
+
+//图片
+.main_img {
+  height: 100%;
+  width: 100%;
+}
+
+.image-slot {
+  height: 100%;
+  width: 100%;
+  background-color: #8a979e;
+  text-align: center;
+  font-size: 8vh;
+  color: #fff;
+  i {
+    line-height: 25vh;
+  }
+}
+
+//tag标签
+.el-tag {
+  background-color: #1010d7;
+  border-color: transparent;
+  border-radius: 0.5vh;
+  height: 3.5vh;
+  margin-right: 2vh;
+  margin-top: 1vh;
+  padding: 0 2vh;
+  line-height: 3.2vh;
+  font-size: 1.8vh;
+  color: #68d2fb;
+}
+
+//菜单
+.el-menu {
+  background-color: #04068D;
+ .el-menu-item {
+    height: 6vh;
+    line-height: 6vh;
+  }
+
+  .el-menu-item {
+    font-size: 2vh;
+    color: #389EA4;
+  }
+  .el-menu-item.is-active{
+    background-color: #04068D;
+    color: #5FE3F8;
+    font-weight: 600;
+  }
+  .el-menu-item:not(.is-disabled):focus, .el-menu-item:not(.is-disabled):hover,  .el-submenu .el-submenu__title:hover{
+    background-color: #04068D;
+    color: #5FE3F8;
+    font-weight: 600;
+  }
+}
+.el-menu.el-menu--horizontal {
+  border: 0;
+}
+
+//表格样式1
+.table1 {
+  width: 96%;
+  font-size: 1.8vh;
+  border-collapse: collapse;
+  margin: 0 2%;
+  margin-top: 2vh;
+  margin-bottom: 1vh;
+  td {
+    line-height: 3vh;
+    padding: 1vh 2vh;
+    border: 1px #020171 solid;
+  }
+  td:nth-child(1), td:nth-child(3) {
+    width: 20%;
+    color: #1F598F;
+    background-color: #020345;
+  }
+  td:nth-child(2), td:nth-child(4) {
+    width: 30%;
+    color: #389EA4;
+  }
+}
