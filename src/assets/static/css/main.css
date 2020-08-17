@@ -5,6 +5,9 @@
 .main {
   margin-top: 9vh;
 }
+.content-wrap {
+  padding: 20px 50px;
+}
 .pop_col_tit {
   padding-left: 5vh;
   position: relative;
