@@ -1,9 +1,7 @@
 <template>
     <div id="layout">
         <div class="charts">
-            <div class="titleBoxs" @click="goIndex">
-
-            </div>
+            <div class="titleBoxs" @click="goIndex"></div>
             <div class="titleBox">
                 <div class="ind_title ind_left">
                     <p>
@@ -13,7 +11,6 @@
                     </p>
                 </div>
                 <div class="ind_title ind_center" @click="routerLink(0)">
-                    <p>{{title}}</p>
                     <p>{{title}}</p>
                 </div>
                 <div class="ind_title ind_right">
@@ -26,10 +23,8 @@
                     <div></div>
                 </div>
             </div>
-            <keep-alive>
-                <router-view v-if="$route.meta.keepAlive"></router-view>
-            </keep-alive>
-            <router-view v-if="!$route.meta.keepAlive"></router-view>
+            <NavTab></NavTab>
+            <router-view></router-view>
         </div>
     </div>
 </template>
@@ -39,6 +34,7 @@
     import '@/assets/scss/main.scss'
     import '@static/css/reset.css';
     import '@static/css/main.css';
+    import NavTab from './NavTab'
     import $ from 'jquery';
 
     export default {
@@ -56,7 +52,9 @@
                 isCollapse: false,
             }
         },
-        components: {},
+        components: {
+            NavTab
+        },
         mounted() {
             this.currentPage()
             var that = this;
@@ -113,15 +111,14 @@
 <style lang="scss" scoped>
     #layout {
         height: 100%;
-        background-image: url('~@static/img/index/bg_20.png');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 100% 100%;
+        overflow: auto;
+        background: url('~@static/img/main-bg.png') no-repeat center bottom, linear-gradient(to top, #000017,#04056b);
     }
 
     .charts {
         user-select: none;
         overflow: auto;
+        height: calc(100% - 30px);
         width: 100%;
         .titleBoxs {
             width: 70%;
@@ -174,13 +171,13 @@
             }
             .ind_center {
                 text-align: center;
-                font-size: 4vh;
+                font-size: 3.5vh;
                 font-weight: bold;
                 width: 40%;
 
                 letter-spacing: 9px;
-                line-height: 7vh;
-                color: #B6ECF9;
+                line-height: 6vh;
+                color: #ccf8ff;
                 p {
                     cursor: pointer;
                     position: absolute;
@@ -190,10 +187,7 @@
                     bottom: 0;
                 }
                 p:nth-child(1) {
-                    text-shadow: 3px 3px 3px #000002;
-                }
-                p:nth-child(2) {
-                    text-shadow: 0 0 5px #005bff, 0 0 15px #005bff, 0 0 25px #005bff;
+                    text-shadow: 0 0 15px rgba(0,111,255,1), 0 0 25px rgba(0,111,255,1), 3px 3px 0 rgba(0,0,0,.5);
                 }
             }
             .ind_right {

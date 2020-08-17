@@ -22,8 +22,34 @@ export default new Router({
                 {
                     name: 'index',
                     path: '/index',
+                    redirect: '/applicationList',
                     component: resolve => require(['@/page/home/index'], resolve),
                     meta: {keepAlive: false}// 缓存
+                },
+                {
+                    name: 'applicationList',
+                    path: '/applicationList',
+                    component: resolve => require(['@/page/application/applicationList'], resolve),
+                },
+                {
+                    name: 'componentList',
+                    path: '/componentList',
+                    component: resolve => require(['@/page/component/componentList'], resolve),
+                },
+                {
+                    name: 'dataList',
+                    path: '/dataList',
+                    component: resolve => require(['@/page/dataStore/dataList'], resolve),
+                },
+                {
+                    name: 'serverApiList',
+                    path: '/serverApiList',
+                    component: resolve => require(['@/page/serverAPI/serverApiList'], resolve),
+                },
+                {
+                    name: 'instructionsContent',
+                    path: '/instructionsContent',
+                    component: resolve => require(['@/page/instructions/instructionsContent'], resolve),
                 }
             ]
         }
