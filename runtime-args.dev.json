@@ -1,0 +1,8 @@
+{
+  "VUE_APP_PROXY_TARGET": "http://my.dfjx.com:16600/portal",
+  "VUE_APP_TAG_API_URL":"http://59.212.226.45:30034",
+ "VUE_APP_AC_HTTP_LOGIN":" http://cloud.dfjx.com:8081",
+  "VUE_APP_AC_HTTP_LOGOUT":"http://localhost:10081/#/index",
+  "VUE_APP_AC_IS_LOGIN":"true",
+  "VUE_APP_BACK_RETURN":"http://my.dfjx.com:16600/portal/login/auth/token"
+}

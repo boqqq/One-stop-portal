@@ -4,8 +4,8 @@ import axios from 'axios'
 import router from '@/router'
 import qs from 'qs'
 import merge from 'lodash/merge'
+import runtimeArgs from '@/runtime-args'
 
-var por = process.env.VUE_APP_PROXY_TARGET;
 //import { clearLoginInfo } from '@/utils'
 Vue.use(Vuex)
 
@@ -22,9 +22,10 @@ const http = axios.create({
  * 响应拦截
  */
 http.interceptors.response.use(response => {
-    if (response.data.code != '0') {
-       // gotoLogin()
-        //return
+    console.log('=========================='+response.data.code)
+    if (response.data.code != '0' && response.data.code == '401') {
+        gotoLogin()
+        return
     }
     return response
 }, error => {
@@ -53,10 +54,20 @@ http.interceptors.response.use(response => {
 
 
 function gotoLogin() {
-    const httpLogin = process.env.VUE_APP_AC_HTTP_LOGIN
-    let locationHref = process.env.VUE_APP_BACK_RETURN + "?backUrl=" + encodeURIComponent(location.href)
+    const httpLogin = runtimeArgs.VUE_APP_AC_HTTP_LOGIN
+    let locationHref = runtimeArgs.VUE_APP_BACK_RETURN + "?backUrl=" + encodeURIComponent(location.href)
     let url = `${httpLogin}?redirect_url=${encodeURIComponent(locationHref)}`
+    console.log('url-------------------------------------------'+url)
     location.href = url
+}
+
+/**
+ * 清除登录信息
+ */
+export function clearLoginInfo () {
+    console.log("clear login info is running....")
+    Vue.cookie.delete('token')
+    sessionStorage.clear();
 }
 
 /**
@@ -66,7 +77,7 @@ function gotoLogin() {
 http.adornUrl = (actionName) => {
     // 非生产环境 && 开启代理, 接口前缀统一使用[/proxyApi/]前缀做代理拦截!
     //return (process.env.NODE_ENV !== 'production' && process.env.OPEN_PROXY ? '/proxyApi/' : window.SITE_CONFIG.baseUrl) + actionName
-    return por + actionName
+    return runtimeArgs.VUE_APP_PROXY_TARGET + actionName
 }
 
 /**
@@ -76,7 +87,7 @@ http.adornUrl = (actionName) => {
 http.adornTAGUrl = (actionName) => {
     // 非生产环境 && 开启代理, 接口前缀统一使用[/proxyApi/]前缀做代理拦截!
     //return (process.env.NODE_ENV !== 'production' && process.env.OPEN_PROXY ? '/proxyApi/' : window.SITE_CONFIG.baseUrl) + actionName
-    return process.env.VUE_APP_TAG_API_URL + actionName
+    return runtimeArgs.VUE_APP_TAG_API_URL + actionName
 }
 
 /**

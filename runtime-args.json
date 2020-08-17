@@ -1,0 +1,8 @@
+{
+  "VUE_APP_PROXY_TARGET": "http://59.212.226.7:16600/portal",
+  "VUE_APP_TAG_API_URL":"http://59.212.226.45:30034",
+  "VUE_APP_AC_HTTP_LOGIN":"http://59.212.226.45:31000/frontier/auth/toLogin",
+  "VUE_APP_AC_HTTP_LOGOUT":"http://59.212.226.49:9302/cas/logout",
+  "VUE_APP_AC_IS_LOGIN":"true",
+  "VUE_APP_BACK_RETURN":"http://59.212.226.7:16600/portal/login/auth/token"
+}
