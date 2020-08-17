@@ -4,7 +4,7 @@ const resolve = dir => path.join(__dirname, dir);
 module.exports = {
     publicPath: './',
     devServer: {
-        port: 10080,
+        port: 10090,
         open: false, // 项目启动时是否自动打开浏览器，我这里设置为false,不打开，true表示打开
     },
 
